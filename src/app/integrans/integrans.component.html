@@ -1,0 +1,12 @@
+<h2> Membres BTS </h2>
+
+<ul>
+    @for (integrant of integrants; track integrant.id) {
+        <li >
+        <app-portada-integrant 
+            [integrant]="integrant"
+            [selected]="integrant.id === selectedIntegrantId"
+            (select)="onSelectIntegrant($event)" />
+        </li>
+    }
+</ul>

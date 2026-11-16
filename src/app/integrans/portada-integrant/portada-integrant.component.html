@@ -1,0 +1,9 @@
+<button class='card'>
+    @if (selected()) {
+        <app-info-integrant [integrant]="integrant()" />
+    } @else {
+        <img [src]="integrant().foto" [alt]="'Foto de ' + integrant().nom">
+        <p class="nombre">{{ integrant().nom }}</p>
+    }
+
+</div>
