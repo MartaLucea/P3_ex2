@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { INTEGRANT } from './integrants';
+import { Integrant } from './integrant.model'
 import { PortadaIntegrantComponent } from './portada-integrant/portada-integrant.component'; 
-
+import { InfoIntegrantComponent } from './info-integrant/info-integrant.component';
 @Component({
-  imports: [PortadaIntegrantComponent],
+  imports: [PortadaIntegrantComponent, InfoIntegrantComponent],
   selector: 'app-integrans',
   templateUrl: './integrans.component.html',
 })
 export class IntegransComponent {
   integrants = INTEGRANT;
-  selectedIntegrantId?: string;
+  selectedIntegrant?: Integrant;
 
-  onSelectIntegrant(id: string) {
-    this.selectedIntegrantId = id;
+  onSelectIntegrant(i: Integrant ) {
+    this.selectedIntegrant = i;
   }
 }

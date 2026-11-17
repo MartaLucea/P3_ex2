@@ -5,8 +5,11 @@
         <li >
         <app-portada-integrant 
             [integrant]="integrant"
-            [selected]="integrant.id === selectedIntegrantId"
+            [selected]="integrant === selectedIntegrant"
             (select)="onSelectIntegrant($event)" />
         </li>
+    }
+    @if (selectedIntegrant) {
+        <app-info-integrant [integrant]="selectedIntegrant" />
     }
 </ul>
