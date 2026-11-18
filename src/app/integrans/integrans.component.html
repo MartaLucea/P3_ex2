@@ -1,15 +1,28 @@
-<h2> Membres BTS </h2>
+<section class="relative mx-auto max-w-6xl px-5 pt-14 pb-4 sm:pt-20">
 
-<ul>
+  <header class="mb-12 text-center motion-safe:animate-rise">
+    <p class="kicker mb-4">Bangtan Sonyeondan</p>
+    <h2 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+      Membres <span class="text-gradient">BTS</span>
+    </h2>
+    <p class="mx-auto mt-4 max-w-md text-violet-100/60">Tria un membre i descobreix la seva història.</p>
+  </header>
+
+  @if (selectedIntegrant) {
+    <app-info-integrant class="mb-20 block motion-safe:animate-rise" [integrant]="selectedIntegrant" />
+  }
+
+  <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
     @for (integrant of integrants; track integrant.id) {
-        <li >
-        <app-portada-integrant 
-            [integrant]="integrant"
-            [selected]="integrant === selectedIntegrant"
-            (select)="onSelectIntegrant($event)" />
+      @if (integrant !== selectedIntegrant) {
+        <li>
+          <app-portada-integrant
+              class="block"
+              [integrant]="integrant"
+              [selected]="false"
+              (select)="onSelectIntegrant($event)" />
         </li>
+      }
     }
-    @if (selectedIntegrant) {
-        <app-info-integrant [integrant]="selectedIntegrant" />
-    }
-</ul>
+  </ul>
+</section>

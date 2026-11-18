@@ -1,18 +1,20 @@
 <nav aria-label="Navegació principal">
-  <ul >
+  <ul class="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1">
     <li>
-      <a 
-        routerLink="/" 
-        routerLinkActive="" 
+      <a
+        class="nav-link"
+        routerLink="/"
+        routerLinkActive="is-active"
         [routerLinkActiveOptions]="{ exact: true }"
         >
         Inici
       </a>
     </li>
     <li>
-      <a 
-        routerLink="/integrants" 
-        routerLinkActive="">
+      <a
+        class="nav-link"
+        routerLink="/integrants"
+        routerLinkActive="is-active">
         Integrants
       </a>
     </li>

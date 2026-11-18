@@ -1,8 +1,29 @@
 @if (!selected()) {
-<button [class.active]="selected()" (click)="onSelectIntegrant()">
-    
-    <img [src]="integrant().foto" [alt]="'Foto de ' + integrant().nom">
-    <p class="nombre">{{ integrant().nom }}</p>
+<button
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    type="button"
+    [class.active]="selected()"
+    (click)="onSelectIntegrant()"
+    class="group relative block w-full cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-night-800 text-left shadow-xl shadow-black/40 transition duration-500 hover:-translate-y-2 hover:border-violet-400/60 hover:shadow-2xl hover:shadow-violet-600/30">
+    <div class="aspect-4/5 overflow-hidden">
+        <img
+            class="size-full object-cover object-top saturate-75 transition duration-700 group-hover:scale-110 group-hover:saturate-100"
+            [src]="integrant().foto"
+            [alt]="'Foto de ' + integrant().nom"
+            loading="lazy">
+    </div>
 
+    <div aria-hidden="true" class="absolute inset-0 bg-linear-to-t from-night-950 via-night-950/30 to-transparent transition duration-500 group-hover:from-violet-950"></div>
+
+    <span class="absolute top-4 left-4 rounded-full border border-white/15 bg-night-950/50 px-2.5 py-1 font-display text-xs tracking-widest text-violet-200 backdrop-blur">
+        0{{ integrant().id }}
+    </span>
+
+    <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+        <p class="nombre font-display text-lg leading-tight font-bold text-white sm:text-xl">{{ integrant().nom }}</p>
+        <span class="mt-1 inline-block translate-y-1 text-xs font-medium tracking-widest text-violet-300 uppercase opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            Veure perfil →
+        </span>
+    </div>
 </button>
 }
