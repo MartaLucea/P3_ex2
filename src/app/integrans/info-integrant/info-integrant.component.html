@@ -1,7 +1,7 @@
 @if (integrant) {
 <article class="relative isolate">
     <div aria-hidden="true" class="pointer-events-none absolute -top-24 -left-24 -z-10 size-96 rounded-full bg-violet-600/25 blur-[110px]"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute -right-20 bottom-0 -z-10 size-80 rounded-full bg-fuchsia-600/15 blur-[110px]"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 bottom-0 -z-10 size-80 rounded-full bg-album/20 blur-[110px]"></div>
 
     <div class="grid gap-8 lg:grid-cols-12">
 
@@ -41,7 +41,7 @@
                     <p class="mb-4 flex flex-wrap gap-2">
                         @for (alias of integrant.nomArtistic; track alias) {
                             @if ($first) {
-                                <span class="rounded-full bg-linear-to-r from-violet-500 to-fuchsia-500 px-3 py-1 text-xs font-semibold tracking-wider text-white shadow-lg shadow-violet-600/40">{{ alias }}</span>
+                                <span class="rounded-full bg-linear-to-r from-violet-500 to-album px-3 py-1 text-xs font-semibold tracking-wider text-white shadow-lg shadow-violet-600/40">{{ alias }}</span>
                             } @else {
                                 <span class="rounded-full border border-violet-400/30 px-3 py-1 text-xs font-semibold tracking-wider text-violet-200">{{ alias }}</span>
                             }
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <section class='album mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-linear-to-br from-violet-900/40 via-night-800 to-night-900 p-7 shadow-2xl shadow-black/40 sm:p-10'>
+    <section class='album mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-linear-to-br from-violet-900/40 via-night-800 to-album/15 p-7 shadow-2xl shadow-black/40 sm:p-10'>
         <h2 class="kicker mb-8">Àlbum més famós</h2>
 
         <div class="grid items-center gap-10 lg:grid-cols-2">
@@ -75,7 +75,7 @@
                 </div>
                 <div class='img w-48 shrink-0 sm:w-56'>
                     <img
-                        class="aspect-square w-full rotate-3 rounded-2xl object-cover shadow-2xl shadow-violet-700/50 ring-1 ring-white/15 transition duration-500 hover:rotate-0 hover:scale-105"
+                        class="aspect-square w-full rotate-3 rounded-2xl object-cover shadow-2xl shadow-violet-700/50 ring-1 ring-white/15"
                         [src]="integrant.portadaAlbumFamoso"
                         [alt]="'Portada álbum ' + integrant.infoAlbum.nom">
                 </div>

@@ -1,4 +1,4 @@
-/* Estils globals · tema "Purple Night" inspirat en BTS (el morat d'ARMY) */
+/* Estils globals · BTS: morat nit + roig de l'àlbum actual */
 
 @import 'tailwindcss';
 
@@ -12,68 +12,43 @@
   --color-night-800: #160d2a;
   --color-night-700: #21143d;
 
-  --animate-float: float 9s ease-in-out infinite;
-  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-24px) scale(1.04); }
-  }
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  /* Roig de l'àlbum actual (canvia'l aquí i s'actualitza a tot el web) */
+  --color-album: #e11d2e;
+  --color-album-light: #ff6b73;
 }
 
 @layer base {
   html {
+    @apply scroll-smooth motion-reduce:scroll-auto;
     color-scheme: dark;
-    scroll-behavior: smooth;
   }
 
   body {
-    min-height: 100vh;
-    font-family: var(--font-sans);
-    color: #f5f3ff;
-    background-color: var(--color-night-950);
-    /* Resplendor morat + cel estrellat */
+    @apply min-h-screen bg-night-950 font-sans text-violet-50 antialiased;
+    /* Resplendor morat (dalt esquerra) i roig (dalt dreta) */
     background-image:
       radial-gradient(60rem 40rem at 12% -10%, rgb(124 58 237 / 0.28), transparent 60%),
-      radial-gradient(50rem 35rem at 98% 8%, rgb(217 70 239 / 0.14), transparent 60%),
-      radial-gradient(1px 1px at 20px 30px, rgb(255 255 255 / 0.55), transparent),
-      radial-gradient(1px 1px at 120px 90px, rgb(221 214 254 / 0.45), transparent),
-      radial-gradient(1.5px 1.5px at 70px 160px, rgb(255 255 255 / 0.35), transparent);
-    background-size: auto, auto, 180px 200px, 240px 260px, 310px 290px;
+      radial-gradient(50rem 35rem at 98% 8%, rgb(225 29 46 / 0.16), transparent 60%);
     background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background: #8b5cf6;
-    color: #fff;
+    @apply bg-violet-500 text-white;
   }
 
   :focus-visible {
-    outline: 2px solid #c4b5fd;
-    outline-offset: 3px;
+    @apply outline-2 outline-offset-2 outline-violet-300;
   }
 }
 
-/* Text amb degradat lavanda → rosa */
+/* Text amb degradat lavanda → roig */
 @utility text-gradient {
-  background-image: linear-gradient(100deg, #ddd6fe 0%, #a78bfa 38%, #f0abfc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  @apply bg-linear-to-r from-violet-200 via-violet-400 to-album-light bg-clip-text text-transparent;
 }
 
 /* Etiqueta petita en majúscules */
 @utility kicker {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: #a78bfa;
+  @apply text-xs font-semibold tracking-[0.32em] text-violet-400 uppercase;
 }
 
 /* Vinil: solcs concèntrics + reflex */
@@ -81,29 +56,4 @@
   background:
     conic-gradient(from 30deg, rgb(255 255 255 / 0.1), transparent 18%, rgb(255 255 255 / 0.12) 36%, transparent 55%, rgb(255 255 255 / 0.1) 76%, transparent),
     repeating-radial-gradient(circle at center, #1b1430 0 1px, #08050f 1px 3px);
-}
-
-@layer components {
-  /* Enllaç de navegació; .is-active el posa routerLinkActive */
-  .nav-link {
-    display: inline-block;
-    border-radius: 9999px;
-    padding: 0.5rem 1.1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: rgb(221 214 254 / 0.7);
-    transition: color 0.25s, background-color 0.25s, box-shadow 0.25s;
-  }
-  .nav-link:hover {
-    color: #fff;
-  }
-  .nav-link.is-active {
-    color: #fff;
-    background-image: linear-gradient(120deg, #7c3aed, #c026d3);
-    box-shadow: 0 6px 24px -6px rgb(139 92 246 / 0.7);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
 }
