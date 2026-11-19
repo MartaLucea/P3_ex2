@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-
+import { GalleryComponent } from '../gallery/gallery.component';
 @Component({
-  imports: [],
+  imports: [GalleryComponent],
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
