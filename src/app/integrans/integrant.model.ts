@@ -8,8 +8,8 @@ export interface Integrant {
   infoAlbum: {
     nom: string;
     any: string;
+    descripcio: string;
   };
   portadaAlbumFamoso: string;
-  albumFamoso: string;
-  musica: string;
+  album: string;
 }

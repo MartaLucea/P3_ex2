@@ -5,7 +5,7 @@
 
     <div class="grid gap-8 lg:grid-cols-12">
 
-        <div class='vinilo flex flex-col items-center gap-6 rounded-[2rem] border border-white/10 bg-white/4 p-7 backdrop-blur lg:col-span-4 lg:self-start'>
+        <div class='vinilo flex flex-col items-center gap-6 rounded-4xl border border-white/10 bg-white/4 p-7 backdrop-blur lg:col-span-4 lg:self-start'>
             <div class="relative aspect-square w-full max-w-xs">
                 <div class="vinyl absolute inset-0 rounded-full shadow-2xl shadow-violet-900/70 motion-safe:animate-[spin_14s_linear_infinite]">
                     <img
@@ -22,13 +22,13 @@
             </div>
 
             <audio class='audio w-full' controls>
-                <source [src]="integrant.musica" type='audio/mpeg'>
+                <source [src]="integrant.album" type='audio/mpeg'>
             </audio>
         </div>
 
         <div class='principal flex flex-col gap-8 lg:col-span-8'>
 
-            <section class='tarjeta overflow-hidden rounded-[2rem] border border-white/10 bg-night-800/80 shadow-2xl shadow-black/40 sm:grid sm:grid-cols-5'>
+            <section class='tarjeta overflow-hidden rounded-4xl border border-white/10 bg-night-800/80 shadow-2xl shadow-black/40 sm:grid sm:grid-cols-5'>
                 <div class='img relative min-h-80 sm:col-span-2'>
                     <img
                         class="absolute inset-0 size-full object-cover object-top"
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <section class='album mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-linear-to-br from-violet-900/40 via-night-800 to-album/15 p-7 shadow-2xl shadow-black/40 sm:p-10'>
+    <section class='album mt-10 overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-violet-900/40 via-night-800 to-album/15 p-7 shadow-2xl shadow-black/40 sm:p-10'>
         <h2 class="kicker mb-8">Àlbum més famós</h2>
 
         <div class="grid items-center gap-10 lg:grid-cols-2">
@@ -74,21 +74,12 @@
                     <p class="mt-3 font-display text-6xl font-extrabold text-gradient sm:text-7xl">{{ integrant.infoAlbum.any }}</p>
                 </div>
                 <div class='img w-48 shrink-0 sm:w-56'>
+                    <p>{{integrant.infoAlbum.descripcio}}</p>
                     <img
                         class="aspect-square w-full rotate-3 rounded-2xl object-cover shadow-2xl shadow-violet-700/50 ring-1 ring-white/15"
                         [src]="integrant.portadaAlbumFamoso"
                         [alt]="'Portada álbum ' + integrant.infoAlbum.nom">
                 </div>
-            </div>
-
-            <div class="aspect-video overflow-hidden rounded-3xl border border-white/10 bg-night-900 shadow-2xl shadow-violet-950/60">
-                <iframe
-                    class="size-full"
-                    [src]="integrant.albumFamoso"
-                    [title]="'Àlbum ' + integrant.infoAlbum.nom"
-                    loading="lazy"
-                    allowfullscreen>
-                </iframe>
             </div>
         </div>
     </section>
