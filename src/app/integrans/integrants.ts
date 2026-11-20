@@ -11,7 +11,7 @@ export const INTEGRANT = [
       nom: 'Indigo', any: '2022',
       descripcio: 'Indigo (2022) és el primer àlbum en solitari de RM, de BTS. És un disc reflexiu i personal que parla de la identitat, la llibertat i el creixement durant els seus vint anys. Barreja hip-hop, R&B, soul i pop, amb diverses col·laboracions. El tema més conegut és “Wild Flower”.'
     },
-    portadaAlbumFamoso: 'https://www.culturajoven.es/wp-content/uploads/2022/12/portada_indigo_rm-1024x1024.jpg',
+    portadaAlbumFamoso: 'RM_Indigo',
     album: 'RM_Indigo'
   },
   {
@@ -25,7 +25,7 @@ export const INTEGRANT = [
       nom: 'Happy', any: '2024',
       descripcio: 'Happy (2024) és el primer EP en solitari de Jin, de BTS. Té 6 cançons i transmet felicitat, amor i gratitud cap als fans. Inclou “Running Wild”, la cançó principal, i “Heart on the Window” amb Wendy de Red Velvet.'
     },
-    portadaAlbumFamoso: 'https://i.scdn.co/image/ab67616d0000b2731dcf069284321bef1306d6ec',
+    portadaAlbumFamoso: 'Jin_Happy',
     album: 'Jin_Happy'
   },
   {
@@ -39,7 +39,7 @@ export const INTEGRANT = [
       nom: 'D-DAY', any: '2023',
       descripcio: 'D-Day (2023) és el primer àlbum en solitari d’Agust D, l’àlter ego de Suga de BTS. Té 10 cançons i explora temes com la llibertat, la identitat i la superació dels problemes personals. Inclou “Haegeum”, “People Pt.2” i “Amygdala”.'
     },
-    portadaAlbumFamoso: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHuXgGud70N0KXSwn9134f2TQNMeTo5pUCFw&s',
+    portadaAlbumFamoso: 'AgustD_D-DAY',
     album: 'AgustD_D-DAY'
   },
   {
@@ -53,8 +53,8 @@ export const INTEGRANT = [
       nom: 'HOPE ON THE STREET VOL.1', any: '2024'
       , descripcio: 'HOPE ON THE STREET VOL.1 (2024) és un àlbum de J-Hope de BTS, format per 6 cançons. Explora el ball i les seves arrels com a ballarí, amb sons de hip-hop, R&B i pop. Inclou “NEURON” amb Gaeko i yoonmirae, i “i wonder…” amb Jung Kook.'
     },
-    portadaAlbumFamoso: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6zXZ_mH57XoDpCeZjWT-SRJdNFZhbPcAI6g&s',
-    album: 'Jungkook_Golden'
+    portadaAlbumFamoso: 'J-Hope_Hope',
+    album: 'J-Hope_Hope'
   },
   {
     id: '5',
@@ -67,7 +67,7 @@ export const INTEGRANT = [
       nom: 'FACE', any: '2023',
       descripcio: 'FACE (2023) és el primer àlbum en solitari de Jimin, de BTS. Té 6 cançons i explora la identitat, la solitud i les emocions difícils durant la pandèmia. Inclou “Like Crazy”, la cançó principal, i “Set Me Free Pt.2”.'
     },
-    portadaAlbumFamoso: 'https://i.redd.it/p6xw3vn3xrma1.jpg',
+    portadaAlbumFamoso: 'Jimin_FACE',
     album: 'Jimin_Face'
   },
   {
@@ -81,7 +81,7 @@ export const INTEGRANT = [
       nom: 'Lay Over', any: '2023',
       descripcio: 'Layover (2023) és el primer àlbum en solitari de V, de BTS. Té 6 cançons i té un estil relaxat de jazz i R&B, amb temes de nostàlgia, amor i enyorança. Inclou “Slow Dancing”, “Rainy Days” i “Love Me Again”.'
     },
-    portadaAlbumFamoso: 'https://cdn-images.dzcdn.net/images/cover/d46aa3a3b70786cb2137c878f1a76946/0x1900-000000-80-0-0.jpg',
+    portadaAlbumFamoso: 'V_Lay-Over',
     album: 'V_Lay-Over'
   },
   {
@@ -95,7 +95,7 @@ export const INTEGRANT = [
       nom: 'Golden ', any: '2023',
       descripcio: 'GOLDEN (2023) és el primer àlbum en solitari de Jung Kook, de BTS. Té 11 cançons, totes en anglès, i parla de l’amor, l’atracció i les ruptures. Inclou “Seven”, “3D” i “Standing Next to You”.'
     },
-    portadaAlbumFamoso: 'https://cdn-images.dzcdn.net/images/cover/5d316d47d96b7c8f5a029dffe1f38981/1900x1900-000000-80-0-0.jpg',
+    portadaAlbumFamoso: 'Jungkook_Golden',
     album: 'Jungkook_Golden'
   }
 ];
