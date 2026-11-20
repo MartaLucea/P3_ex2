@@ -1,1 +1,8 @@
-<p>audio-player.component works!</p>
+@if (nom) {
+  @for (n of [nom]; track n) {
+    <audio controls preload="none">
+      <source [src]="'/music/' + n + '.ogg'" type="audio/ogg" />
+      <source [src]="'/music/' + n + '.mp3'" type="audio/mpeg" />
+    </audio>
+  }
+}

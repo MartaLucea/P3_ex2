@@ -21,9 +21,7 @@
                 <p class="font-display text-lg font-bold text-white">{{ integrant.infoAlbum.nom }}</p>
             </div>
 
-            <audio class='audio w-full' controls>
-                <source [src]="integrant.album" type='audio/mpeg'>
-            </audio>
+            <app-audio-player [nom]="integrant.album"/>
         </div>
 
         <div class='principal flex flex-col gap-8 lg:col-span-8'>

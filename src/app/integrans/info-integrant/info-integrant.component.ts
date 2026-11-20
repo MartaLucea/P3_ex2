@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Integrant } from '../integrant.model';
-
+import { AudioPlayerComponent } from '../../audioPlayer/audio-player.component'
 @Component({
-  imports: [],
+  imports: [AudioPlayerComponent],
   selector: 'app-info-integrant',
   templateUrl: './info-integrant.component.html',
 })

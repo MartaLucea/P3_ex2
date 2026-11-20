@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'app-audio-player.component',
-  styleUrl: './audio-player.component.css',
+  selector: 'app-audio-player',
   templateUrl: './audio-player.component.html',
 })
-export class AudioPlayerComponent {}
+export class AudioPlayerComponent {
+  @Input() nom: string='';
+
+}
