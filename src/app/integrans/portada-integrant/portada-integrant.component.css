@@ -1,0 +1,118 @@
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  background: #1a1535; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+  border-color: rgba(217, 70, 239, 0.7); 
+  box-shadow: 0 20px 25px -5px rgba(217, 70, 239, 0.25), 0 8px 10px -6px rgba(217, 70, 239, 0.25);
+}
+
+.card__photo {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.75);
+  transition: filter 0.15s;
+}
+
+.card:hover .card__img {
+  filter: saturate(1);
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0a0818, rgba(10, 8, 24, 0.3), transparent); /* night-950 */
+  transition: opacity 0.15s;
+}
+
+.card__overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #2e1065, rgba(46, 16, 101, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card:hover .card__overlay::after {
+  opacity: 1;
+}
+
+.card__id {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.625rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  background: rgba(10, 8, 24, 0.5); 
+  font-family: var(--font-display, inherit);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.1em;
+  color: #ddd6fe;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.card__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.card__name {
+  margin: 0;
+  font-family: var(--font-display, inherit);
+  font-size: 1.125rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card__cta {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f0abfc; 
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card:hover .card__cta {
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .card__footer { padding: 1.25rem; }
+
+  .card__name {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}

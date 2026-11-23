@@ -6,6 +6,7 @@ import { InfoIntegrantComponent } from './info-integrant/info-integrant.componen
 @Component({
   imports: [PortadaIntegrantComponent, InfoIntegrantComponent],
   selector: 'app-integrans',
+  styleUrl: './integrans.component.css',
   templateUrl: './integrans.component.html',
 })
 export class IntegransComponent {

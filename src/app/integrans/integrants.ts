@@ -19,7 +19,7 @@ export const INTEGRANT = [
     nom: 'Kim Seok-jin',
     nomArtistic: ['Jin'],
     biografia: 'Kim Seok-jin, conegut com a Jin, és un cantant, compositor i ballarí sud-coreà nascut el 4 de desembre de 1992 a Gwacheon, Corea del Sud. És membre de BTS des del 2013, on actua principalment com a vocalista, i també ha desenvolupat activitats en solitari. Abans de debutar, va estudiar interpretació a la Universitat Konkuk, i el seu debut amb BTS va arribar amb la cançó «No More Dream». Des de llavors s’ha fet molt conegut per la seva veu, la seva presència escènica i temes propis com «Awake» i «Super Tuna».',
-    foto: 'kim-seok-jin',
+    foto: 'kim_seok-jin',
     videoMusical: 'JIN',
     infoAlbum: {
       nom: 'Happy', any: '2024',
@@ -33,7 +33,7 @@ export const INTEGRANT = [
     nom: 'Min Yoon-gi',
     nomArtistic: ['Suga', 'Agust D'],
     biografia: 'Suga, també conegut com a Agust D, és el nom artístic de Min Yoon-gi, un raper, compositor i productor sud-coreà nascut el 9 de març de 1993 a Daegu. Forma part de BTS des del 2013 i és conegut pel seu estil directe, les seves lletres introspectives i la seva feina en solitari. Abans de debutar, va començar en l’escena underground del rap i va entrar a Big Hit després de superar una audició el 2010. En la seva carrera en solitari ha publicat projectes com Agust D, D-2 i D-Day.',
-    foto: 'min_yoongi',
+    foto: 'min_yoon-gi',
     videoMusical: 'AGUSTD',
     infoAlbum: {
       nom: 'D-DAY', any: '2023',
@@ -47,7 +47,7 @@ export const INTEGRANT = [
     nom: 'Jung Ho-seok',
     nomArtistic: ['J-Hope', 'Smile Hoya'],
     biografia: 'J-Hope, també conegut com a Jung Ho-seok o Jung Hoseok, és un raper, ballarí, cantant i productor sud-coreà nascut el 18 de febrer de 1994 a Gwangju. És membre de BTS des del 2013 i destaca com a ballarí principal i per la seva energia positiva. Abans de debutar, era ballarí underground i feia servir el nom de Smile Hoya. En solitari, ha publicat treballs com Hope World i Jack In The Box.',
-    foto: 'jeon_jung-kook',
+    foto: 'jung_ho-seok',
     videoMusical: 'J-HOPE',
     infoAlbum: {
       nom: 'HOPE ON THE STREET VOL.1', any: '2024'

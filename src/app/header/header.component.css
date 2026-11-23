@@ -1,0 +1,41 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 8, 24, 0.7); /* sustituye por tu color night-950 */
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+.header__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header__title {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: #fff;
+}
+
+@media (min-width: 640px) {
+  .header__inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

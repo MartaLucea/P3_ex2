@@ -1,0 +1,153 @@
+.album {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem 2rem;
+}
+
+.album__header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.album__header .kicker {
+  margin-bottom: 1rem;
+}
+
+.album__title {
+  font-family: var(--font-display, inherit);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+.album__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 11rem;
+  gap: 1.25rem;
+}
+
+.polaroid {
+  --rot: 0deg;
+  --shift: 0;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: #f5f5f4;
+  color: #292524;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  transform: rotate(var(--rot)) translateY(var(--shift));
+  transition: box-shadow 0.15s;
+}
+
+.polaroid:hover {
+  z-index: 10;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.polaroid__photo {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.polaroid__caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0.125rem 0.125rem;
+}
+
+.polaroid__name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.polaroid__date {
+  flex-shrink: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #78716c;
+}
+
+.polaroid--hero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.polaroid--hero .polaroid__caption,
+.polaroid--wide .polaroid__caption {
+  padding: 0.5rem 0.25rem 0.125rem;
+}
+
+.polaroid--hero .polaroid__name,
+.polaroid--wide .polaroid__name {
+  font-size: 0.75rem;
+}
+
+.polaroid--hero .polaroid__date,
+.polaroid--wide .polaroid__date {
+  font-size: 0.6875rem;
+}
+
+.polaroid:nth-child(1) { --rot: -2deg; }
+.polaroid:nth-child(2) { --rot: 3deg; }
+.polaroid:nth-child(3) { --rot: -1deg; }
+.polaroid:nth-child(4) { --rot: -3deg; }
+.polaroid:nth-child(5) { --rot: 2deg; }
+.polaroid:nth-child(6) { --rot: 1deg; }
+.polaroid:nth-child(7) { --rot: -2deg; }
+
+@media (min-width: 640px) {
+  .album { padding-top: 7rem; }
+
+  .album__title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .album__grid {
+    grid-auto-rows: 14rem;
+    gap: 1.75rem;
+  }
+
+  .polaroid { padding: 0.75rem; }
+
+  .polaroid__caption { padding-top: 0.625rem; }
+  .polaroid__name { font-size: 0.75rem; }
+  .polaroid__date { font-size: 0.6875rem; }
+
+  .polaroid--hero .polaroid__caption,
+  .polaroid--wide .polaroid__caption { padding-top: 0.75rem; }
+
+  .polaroid--hero .polaroid__name,
+  .polaroid--wide .polaroid__name { font-size: 0.875rem; }
+
+  .polaroid--hero .polaroid__date,
+  .polaroid--wide .polaroid__date { font-size: 0.75rem; }
+}
+
+@media (min-width: 768px) {
+  .album__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 16rem;
+  }
+
+  .polaroid--wide { grid-column: span 2; }
+
+  .polaroid:nth-child(3) { --shift: 0.75rem; }
+  .polaroid:nth-child(4) { --shift: -0.5rem; }
+  .polaroid:nth-child(7) { --shift: -0.25rem; }
+}

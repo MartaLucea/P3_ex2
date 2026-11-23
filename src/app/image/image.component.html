@@ -1,1 +1,10 @@
-<p>image.component works!</p>
+<figure>
+  <img
+    #imatge
+    [src]="'/img/'+nom+'.webp'"
+    [width]="ample"
+    [height]="altura"
+    [alt]="alt"
+    loading="lazy"
+  />
+</figure>

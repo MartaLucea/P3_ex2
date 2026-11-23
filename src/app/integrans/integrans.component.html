@@ -1,23 +1,23 @@
-<section class="relative mx-auto max-w-6xl px-5 pt-14 pb-4 sm:pt-20">
+<section class="members-page">
 
-  <header class="mb-12 text-center">
-    <p class="kicker mb-4">Bangtan Sonyeondan</p>
-    <h2 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+  <header class="members-page__header">
+    <p class="kicker">Bangtan Sonyeondan</p>
+    <h2 class="members-page__title">
       Membres <span class="text-gradient">BTS</span>
     </h2>
-    <p class="mx-auto mt-4 max-w-md text-violet-100/60">Tria un membre i descobreix la seva història.</p>
+    <p class="members-page__lead">Tria un membre i descobreix la seva història.</p>
   </header>
 
   @if (selectedIntegrant) {
-    <app-info-integrant class="mb-20 block" [integrant]="selectedIntegrant" />
+    <app-info-integrant class="members-page__selected" [integrant]="selectedIntegrant" />
   }
 
-  <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+  <ul class="members-page__grid">
     @for (integrant of integrants; track integrant.id) {
       @if (integrant !== selectedIntegrant) {
         <li>
           <app-portada-integrant
-              class="block"
+              class="members-page__card"
               [integrant]="integrant"
               [selected]="false"
               (select)="onSelectIntegrant($event)" />

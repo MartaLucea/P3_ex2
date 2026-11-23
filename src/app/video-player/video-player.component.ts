@@ -1,17 +1,28 @@
-import { AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   imports: [],
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
 })
-export class VideoPlayerComponent implements AfterViewInit, OnDestroy {
+export class VideoPlayerComponent implements AfterViewInit, OnChanges, OnDestroy {
   @Input() nom: string = '';
 
   @ViewChild('videoMusical') videoRef!: ElementRef<HTMLVideoElement>;
   
   videoVisible = false;
   private observer?: IntersectionObserver;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['nom'] && !changes['nom'].firstChange) {
+      if (this.videoVisible && this.videoRef?.nativeElement) {
+        const video = this.videoRef.nativeElement;
+        video.pause();
+        video.currentTime = 0;
+        this.activateVideo(); 
+      }
+    }
+  }
 
   ngAfterViewInit(): void {
     if (!('IntersectionObserver' in window)) {

@@ -1,80 +1,80 @@
-<section class="mx-auto max-w-6xl px-5 pt-20 pb-8 sm:pt-28" aria-labelledby="galeria-titol">
-  <header class="mb-12 text-center">
-    <p class="kicker mb-4">Records</p>
-    <h2 id="galeria-titol" class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+<section class="album" aria-labelledby="galeria-titol">
+  <header class="album__header">
+    <p class="kicker">Records</p>
+    <h2 id="galeria-titol" class="album__title">
       Àlbum de <span class="text-gradient">fotos</span>
     </h2>
   </header>
 
-  <div class="grid auto-rows-44 grid-cols-2 gap-5 sm:auto-rows-56 sm:gap-7 md:auto-rows-64 md:grid-cols-4">
+  <div class="album__grid">
 
-    <figure class="relative col-span-2 row-span-2 flex -rotate-2 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- <img src="..." alt="..." class="size-full object-cover"> -->
+    <figure class="polaroid polaroid--hero">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2020" ample="800" altura="auto" alt="Foto del album Map of the Soul: 7"/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2.5 pb-1 px-1 text-stone-800 sm:pt-3">
-        <span class="truncate text-xs font-semibold tracking-tight sm:text-sm">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[11px] font-medium text-stone-500 sm:text-xs">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">Map of the Soul: 7</span>
+        <span class="polaroid__date">Febrer 2020</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex rotate-3 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2026" ample="500" altura="auto" alt="Foto del album ARIRANG "/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-0.5 text-stone-800 sm:pt-2.5">
-        <span class="truncate text-[11px] font-semibold tracking-tight sm:text-xs">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[10px] font-medium text-stone-500 sm:text-[11px]">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">ARIRANG</span>
+        <span class="polaroid__date">2026</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex -rotate-1 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3 md:translate-y-3">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2013" ample="500" altura="auto" alt="Foto del album 2 Cool 4 Skool"/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-0.5 text-stone-800 sm:pt-2.5">
-        <span class="truncate text-[11px] font-semibold tracking-tight sm:text-xs">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[10px] font-medium text-stone-500 sm:text-[11px]">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">2 Cool 4 Skool</span>
+        <span class="polaroid__date">2013</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex -rotate-3 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3 md:-translate-y-2">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2017" ample="500" altura="auto" alt="Foto del album You Never Walk Alone "/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-0.5 text-stone-800 sm:pt-2.5">
-        <span class="truncate text-[11px] font-semibold tracking-tight sm:text-xs">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[10px] font-medium text-stone-500 sm:text-[11px]">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">You Never Walk Alone</span>
+        <span class="polaroid__date">2017</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex rotate-2 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid polaroid--wide">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2015" ample="500" altura="auto" alt="Foto del album The Most Beautiful Moment in Life Pt.1 "/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-0.5 text-stone-800 sm:pt-2.5">
-        <span class="truncate text-[11px] font-semibold tracking-tight sm:text-xs">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[10px] font-medium text-stone-500 sm:text-[11px]">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">The Most Beautiful Moment in Life Pt.1</span>
+        <span class="polaroid__date">2015</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex rotate-1 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3 md:col-span-2">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid polaroid--wide">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/2.0" ample="1000" altura="auto" alt="Foto del MV de la cançó 2.0"/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-1 text-stone-800 sm:pt-3">
-        <span class="truncate text-xs font-semibold tracking-tight sm:text-sm">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[11px] font-medium text-stone-500 sm:text-xs">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">2.0</span>
+        <span class="polaroid__date">2026</span>
       </figcaption>
     </figure>
 
-    <figure class="relative flex -rotate-2 flex-col bg-stone-100 p-2 shadow-xl shadow-black/50 transition-shadow hover:z-10 hover:shadow-2xl sm:p-3 md:col-span-2 md:-translate-y-1">
-      <div class="relative min-h-0 flex-1 overflow-hidden bg-black">
-        <!-- FOTO -->
+    <figure class="polaroid polaroid--wide">
+      <div class="polaroid__photo">
+        <app-image nom="grupales/army" ample="1000" altura="auto" alt="Foto de la canço Butter amb BTS fent la paraula ARMY"/>
       </div>
-      <figcaption class="flex items-baseline justify-between gap-2 pt-2 pb-0.5 px-1 text-stone-800 sm:pt-3">
-        <span class="truncate text-xs font-semibold tracking-tight sm:text-sm">LLLLL-LLLLL-LLLLL</span>
-        <span class="shrink-0 font-mono text-[11px] font-medium text-stone-500 sm:text-xs">XXXX</span>
+      <figcaption class="polaroid__caption">
+        <span class="polaroid__name">Frame de la canço Butter</span>
+        <span class="polaroid__date">2021</span>
       </figcaption>
     </figure>
 

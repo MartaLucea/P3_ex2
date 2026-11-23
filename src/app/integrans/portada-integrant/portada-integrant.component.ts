@@ -1,7 +1,8 @@
 import { Component, input, output } from '@angular/core';
 import { Integrant } from '../integrant.model';
+import { ImageComponent } from '../../image/image.component';
 @Component({
-  imports: [],
+  imports: [ImageComponent],
   selector: 'app-portada-integrant',
   templateUrl: './portada-integrant.component.html',
 })

@@ -1,16 +1,10 @@
-<video
-    #videoMusical
-    controls
-    preload="none"
-    poster="'/poster/'+ nom'+.web'">
-
-
-    <source data-format="webm" type="video/webm"/>
-    <source data-format="mp4" type="video/mp4"/>
-
-    <track 
-        kind="captions"
-        src="'/videos/'+nom+'.vtt'"
-        default
-    />
-</video>
+@if (nom) {
+    <video #videoMusical controls 
+        preload="none" 
+        [poster]="'/poster/' + nom + '.webp'"
+        class="w-full h-full">
+        <source [src]="'/videos/' + nom + '.webm'" type="video/webm" />
+        <source [src]="'/videos/' + nom + '.mp4'" type="video/mp4" />
+        <track kind="captions" [src]="'/videos/' + nom + '.vtt'" srclang="es" label="Español" default />
+    </video>
+}
