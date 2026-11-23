@@ -1,8 +1,6 @@
 @if (nom) {
-  @for (n of [nom]; track n) {
     <audio controls preload="none">
-      <source [src]="'/music/' + n + '.ogg'" type="audio/ogg" />
-      <source [src]="'/music/' + n + '.mp3'" type="audio/mpeg" />
+      <source [src]="'/music/' + nom + '.ogg'" type="audio/ogg" />
+      <source [src]="'/music/' + nom + '.mp3'" type="audio/mpeg" />
     </audio>
-  }
 }
