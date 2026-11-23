@@ -7,7 +7,6 @@
 
         <div class="vinilo flex flex-col items-center justify-between gap-5 rounded-4xl border border-white/10 bg-white/4 p-6 backdrop-blur lg:col-span-4">
             
-            <!-- Disco más compacto (max-w-52 en lugar de max-w-xs) -->
             <div class="relative aspect-square w-full max-w-52">
                 <div class="vinyl absolute inset-0 rounded-full shadow-2xl shadow-violet-900/70 motion-safe:animate-[spin_14s_linear_infinite]">
                     <img
@@ -58,7 +57,7 @@
     <section class="mt-10 grid items-center gap-8 lg:grid-cols-12">
         
         <div class="lg:col-span-8 aspect-video overflow-hidden rounded-3xl border border-white/10 bg-night-900 shadow-2xl shadow-violet-950/60">
-            <!-- <iframe class="size-full" [src]="integrant.videoMusical" [title]="'Vídeo musical de ' + integrant.nom" loading="lazy" allowfullscreen> </iframe> -->
+            <app-video-player [nom]="integrant.videoMusical"/>
         </div>
 
         <div class="album lg:col-span-4 flex flex-col justify-between overflow-hidden rounded-4xl border border-white/10 bg-linear-to-br from-violet-900/40 via-night-800 to-album/15 p-7 shadow-2xl shadow-black/40 sm:p-8">
